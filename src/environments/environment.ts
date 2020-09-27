@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://g11d-hackernews.herokuapp.com'
+  apiUrl: 'http://99.80.77.224:80'
 };
 
 /*

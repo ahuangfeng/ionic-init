@@ -12,7 +12,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   public login(username: string, password: string) {
-    return this.http.post(this.API_URL, { username, password }).toPromise();
+    return this.http.post(this.API_URL + '/auth/login', { username, password }).toPromise();
   }
 
 }

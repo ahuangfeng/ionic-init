@@ -17,7 +17,11 @@ export class AuthService {
       }).catch(error => {
         console.error(error);
         this.tokenService.clearToken();
-        reject(error);
+        if (error.error) {
+          reject(error.error);
+        } else {
+          reject(error);
+        }
       });
     });
   }
